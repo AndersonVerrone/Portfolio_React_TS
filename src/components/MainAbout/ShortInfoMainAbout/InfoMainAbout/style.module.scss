@@ -1,0 +1,24 @@
+.infoMainAbout {
+  list-style: none;
+
+  > li {
+    display: flex;
+    align-items: center;
+
+    > p:first-child {
+      min-width: 7.5rem;
+      margin-right: 0.625rem;
+      font-weight: 700;
+      color: var(--color-letter);
+      text-transform: capitalize;
+    }
+
+    > p:last-child {
+      font-size: 15px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      word-wrap: break-word;
+      color: var(--color-letter-detail);
+    }
+  }
+}

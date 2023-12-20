@@ -1,0 +1,57 @@
+.header{
+    background-color: var(--color-main);
+    height: 100%;
+    width: 28.125rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    >h1 {
+        color: var(--color-letter);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0.5rem;
+        margin: 2rem
+    }
+
+    >nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 10rem;
+        font-family: var(--font-details);
+
+        >a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-letter-detail);
+            text-decoration: none;
+            text-align: start;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+            
+            &:hover {
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+}
+
+.modeButton {
+    background-color: var(--color-detail);
+    border: none;
+    height: 3.75rem;
+    width: 3.125rem;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 50% 0 0 50%;
+    cursor: pointer;
+}

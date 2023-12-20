@@ -1,0 +1,14 @@
+.textMainAbout {
+  width: 100%;
+  border-bottom: 0.0625rem solid var(--color-highlight);
+  padding-bottom: 1.9375rem;
+  margin-bottom: 1.875rem;
+
+  > p {
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+    color: var(--color-letter-detail);
+  }
+}

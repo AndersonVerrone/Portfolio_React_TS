@@ -1,0 +1,17 @@
+.buttonMainAbout {
+  width: 100%;
+  a {
+    background: var(--color-letter);
+    color: var(--color-main);
+    padding: 0.6875rem 2.5rem;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.9375rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.0313rem;
+    text-decoration: none;
+
+    &:hover {
+      letter-spacing: 1.5px;
+    }
+  }
+}

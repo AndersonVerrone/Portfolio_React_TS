@@ -1,0 +1,11 @@
+.imgAbout {
+  width: 100%;
+  margin-bottom: 2.1875rem;
+  > div {
+    width: 100%;
+    height: 35rem;
+    background-image: url("../../assets/imgAboutMe.png");
+    background-position: center;
+    background-size: cover;
+  }
+}

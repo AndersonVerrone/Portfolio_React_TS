@@ -1,0 +1,18 @@
+.skillItem {
+  color: var(--color-letter-detail);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  > svg {
+    font-size: 23px;
+  }
+
+  > p {
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+    font-weight: 400;
+  }
+}

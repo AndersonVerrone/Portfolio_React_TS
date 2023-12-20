@@ -1,0 +1,44 @@
+.headerPortfolio {
+  width: 100%;
+  margin-bottom: 62px;
+  color: var(--color-letter-detail);
+
+
+  > div:first-of-type {
+    margin-bottom: 0.9375rem;
+    > span {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.75rem;
+      margin-bottom: 0.9375rem;
+      background-color: var(--color-highlight);
+      
+    }
+
+    > h2 {
+      font-weight: 800;
+      color: var(--color-letter);
+      font-size: 1.875rem;
+    }
+  }
+
+  >div:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    >span {
+      cursor: pointer;
+      padding: 0.2rem 0.5rem;
+      display: inline-block;
+      background: var(--color-highlight);
+    }
+  }
+
+}
+
+.selectedLanguage {
+  color: var(--color-letter);
+}

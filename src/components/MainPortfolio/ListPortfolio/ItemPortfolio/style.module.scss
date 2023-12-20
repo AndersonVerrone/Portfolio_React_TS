@@ -1,0 +1,61 @@
+.itemPortfolio {
+    width: 20rem;
+    color: var(--color-letter);
+
+    >h3 {
+        font-size: 25px;
+        margin-bottom: .9375rem; 
+    }
+
+    >div:first-of-type {
+        display: flex;
+        align-items: center;
+        color: var(--color-letter-detail);
+        margin-bottom: .9375rem; 
+
+
+        >p {
+            margin-right: 1rem;
+        }
+
+        >div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            >span {
+                background: var(--color-highlight);
+                padding: 0.2rem 0.5rem;
+                font-size: .75rem;
+            }
+        }
+    }
+
+    >p {
+        color: var(--color-letter-detail);
+        margin-bottom: .9375rem;
+        text-align: justify;
+    }
+
+    >div:last-of-type {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+        >a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-letter-detail);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                letter-spacing: .0938rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.formContact {
+  width: 100%;
+  padding-bottom: 2rem;
+  margin-bottom: 1.6875rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 0.0625rem solid var(--color-highlight);
+
+  > button {
+    font-size: 0.9375rem;
+    line-height: 0.9375rem;
+    padding: 1.1875rem 2.5rem;
+    letter-spacing: 0.0313rem;
+    border: none;
+    cursor: pointer;
+    background: var(--color-letter);
+    color: var(--color-main);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      letter-spacing: 1.5px;
+    }
+  }
+}

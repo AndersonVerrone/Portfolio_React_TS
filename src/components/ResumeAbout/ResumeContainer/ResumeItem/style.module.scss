@@ -1,0 +1,44 @@
+.resumeItem {
+  width: 100%;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 45px;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  &::before {
+    background-color: var(--color-main);
+    border-color: var(--color-highlight);
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+    left: -9px;
+    top: 8px;
+    border: 1px solid;
+  }
+
+  > span {
+    background-color: var(--color-highlight);
+    padding: 8px 25px;
+    border-radius: 50px;
+  }
+
+  > div {
+    line-height: 30px;
+    letter-spacing: .5px;
+
+    > p:first-child {
+      font-size: 16px;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    >p:last-child {
+        font-size: 14px;
+        color: var(--color-letter-detail);
+    }
+  }
+}

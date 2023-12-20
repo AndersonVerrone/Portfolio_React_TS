@@ -1,0 +1,16 @@
+.skillContainer {
+    width: 50%;
+    padding-right: 50px;
+
+    >h3 {
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--color-letter);
+    }
+
+    >ul {
+        width: 100%;
+        list-style-type: none;
+    }
+}

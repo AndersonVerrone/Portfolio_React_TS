@@ -1,0 +1,9 @@
+.listPortfolio {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+}
