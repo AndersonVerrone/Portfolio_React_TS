@@ -13,4 +13,8 @@
         width: 100%;
         list-style-type: none;
     }
+
+    @media screen and (max-width: 1250px) {
+        width: fit-content;
+    }
 }

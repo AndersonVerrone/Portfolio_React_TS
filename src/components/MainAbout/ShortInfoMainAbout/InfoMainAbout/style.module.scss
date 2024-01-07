@@ -21,4 +21,23 @@
       color: var(--color-letter-detail);
     }
   }
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 320px) {
+    >li {
+      > p:first-child {
+        margin-right: 0rem;
+        min-width: 6rem;
+        font-size: 13px;
+      }
+      > p:last-child {
+        font-size: 12px;
+      }
+    }
+  }
 }

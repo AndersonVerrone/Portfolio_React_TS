@@ -1,4 +1,7 @@
-.header{
+.headerContainer {
+  height: 100%;
+  width: 100%;
+  .header {
     background-color: var(--color-main);
     height: 100%;
     width: 28.125rem;
@@ -8,42 +11,43 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 9;
 
-    >h1 {
-        color: var(--color-letter);
-        text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: 0.5rem;
-        margin: 2rem
+    > h1 {
+      color: var(--color-letter);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.5rem;
+      margin: 2rem;
     }
 
-    >nav {
+    > nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 10rem;
+      font-family: var(--font-details);
+
+      > a {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        width: 10rem;
-        font-family: var(--font-details);
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-letter-detail);
+        text-decoration: none;
+        text-align: start;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
 
-        >a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-letter-detail);
-            text-decoration: none;
-            text-align: start;
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: all 0.3s ease-in-out;
-            
-            &:hover {
-                letter-spacing: 0.1rem;
-            }
+        &:hover {
+          letter-spacing: 0.1rem;
         }
+      }
     }
-}
+  }
 
-.modeButton {
+  .modeButton {
     background-color: var(--color-detail);
     border: none;
     height: 3.75rem;
@@ -54,4 +58,130 @@
     transform: translateY(-50%);
     border-radius: 50% 0 0 50%;
     cursor: pointer;
+  }
+
+  .headerPhone {
+    display: none;
+    background-color: var(--color-main);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9375rem;
+    width: 100%;
+    height: 4.375rem;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    z-index: 5;
+
+    > h1 {
+      color: var(--color-letter);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.5rem;
+      margin: 2rem;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      gap: 1rem;
+
+      > .modeButtonMobile {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--color-highlight);
+      }
+
+      > .hamburguerLines {
+        height: 26px;
+        width: 32px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > .line {
+          display: block;
+          height: 4px;
+          width: 100%;
+          border-radius: 10px;
+          background: var(--color-letter-detail);
+        }
+
+        > .line1 {
+          transform-origin: 0% 0%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        > .line2 {
+          transition: transform 0.2s ease-in-out;
+        }
+
+        > .line3 {
+          transform-origin: 0% 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+      }
+    }
+    &.active {
+      h1 {
+        opacity: 0;
+      }
+      
+      .line1 {
+        transform: rotate(45deg);
+      }
+
+      .line2 {
+        transform: scaleY(0);
+      }
+
+      .line3 {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    .header {
+      transform: translateX(-900px);
+      transition: all 0.5s ease-in-out;
+
+      &.active {
+        display: flex;
+        width: 16.875rem;
+        transform: translateX(0);
+
+        .modeButton {
+          display: none;
+        }
+      }
+    }
+    .headerPhone {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .headerPhone > h1 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+
+    .headerPhone{ 
+      gap: 0;
+    > h1 {
+      margin: 0;
+      font-size: .8125rem;
+    }
+  }
+  }
 }

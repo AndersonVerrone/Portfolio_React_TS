@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import styles from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 export const HomePage = () => {
   return (
@@ -29,15 +30,15 @@ export const HomePage = () => {
             competências a cada dia.
           </p>
           <div>
-            <a href="">
+            <Link target="_blank" to={'https://www.linkedin.com/in/anderson-verrone-funicello-30144670/'}>
               <FaLinkedinIn />
-            </a>
-            <a href="">
+            </Link>
+            <Link target="_blank" to={'https://github.com/AndersonVerrone'}>
               <FaGithub />
-            </a>
-            <a href="">
+            </Link>
+            <Link target="_blank" to={'https://web.whatsapp.com/send?phone=5511959175505'}>
               <FaWhatsapp />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import styles from "./style.module.scss";
 import { FaEarthAmericas, FaGithub } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 interface IProject {
     id: number;
@@ -29,16 +30,16 @@ export const ItemPortfolio = ({project}: IItemPortfolioProps) => {
             <p>{project.description}</p>
             <div>
                 {project.repositoryLink&&(
-                    <a href={project.repositoryLink}>
+                    <Link target="_blank" to={project.repositoryLink}>
                         <FaGithub />
                         <p>Repositorio</p>
-                    </a>
+                    </Link>
                 )}
                 {project.siteLink&&(
-                    <a href={project.siteLink}>
+                    <Link target="_blank" to={project.siteLink}>
                         <FaEarthAmericas />
                         <p>Aplicação</p>
-                    </a>
+                    </Link>
                 )}
             </div>
         </li>
