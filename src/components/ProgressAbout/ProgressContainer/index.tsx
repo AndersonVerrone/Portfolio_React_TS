@@ -17,8 +17,8 @@ export const ProgressContainer = ({title, arrayProgress}: IProgressContainerProp
         <div className={styles.progressContainer}>
             <h3>{title}</h3>
             <ul>
-                {arrayProgress.map(progress => (
-                <ProgressItem progress={progress} />
+                {arrayProgress.map((progress, index) => (
+                <ProgressItem key={index} progress={progress} />
                 ))}
             </ul>
         </div>

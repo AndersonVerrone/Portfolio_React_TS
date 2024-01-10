@@ -2,10 +2,11 @@ import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const HomePage = () => {
   return (
-    <div className={styles.homeContainer}>
+    <motion.div className={styles.homeContainer} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <div>
         <div className={styles.imgContainer}>
           <div className={styles.img}></div>
@@ -42,6 +43,6 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

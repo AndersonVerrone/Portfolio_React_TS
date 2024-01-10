@@ -16,7 +16,7 @@ export const SkillContainer = ({title, arraySkills}: InfoSkillContainerProps) =>
         <div className={styles.skillContainer}>
             <h3>{title}</h3>
             <ul>
-                {arraySkills.map(skill => <SkillItem skill={skill} />)}
+                {arraySkills.map((skill, index) => <SkillItem key={index} skill={skill} />)}
             </ul>
         </div>
     )

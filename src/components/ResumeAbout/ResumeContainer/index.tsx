@@ -19,8 +19,8 @@ export const ResumeContainer = ({title, arrayResume}: IResumeContainerProps) => 
         <div className={styles.resumeContainer}>
             <h3>{title}</h3>
             <ul>
-                {arrayResume.map(resume => (
-                    <ResumeItem resume={resume} />
+                {arrayResume.map((resume, index) => (
+                    <ResumeItem key={index} resume={resume} />
                 ))}
             </ul>
         </div>

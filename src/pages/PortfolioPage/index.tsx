@@ -1,10 +1,11 @@
 import { MainPortfolio } from "../../components/MainPortfolio";
 import styles from "./style.module.scss";
+import { motion } from "framer-motion";
 
 export const PortifolioPage = () => {
     return (
-        <div className={styles.portfolioPage}>
+        <motion.div className={styles.portfolioPage} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <MainPortfolio />
-        </div>
+        </motion.div>
     )
 }

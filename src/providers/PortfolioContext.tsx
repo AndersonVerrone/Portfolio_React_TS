@@ -62,6 +62,7 @@ interface IPortfolioContext {
   handleLanguageClick: (item: string) => void;
   selectedLanguage: string | null;
   sendContact: (formData: TFormContactSchema, setIsLoading: React.Dispatch<React.SetStateAction<boolean>>) => Promise<void>;
+  changeMode: () => void;
 }
 
 interface IPortfolioProviderProps {
@@ -89,7 +90,20 @@ export const PortfolioProvider = ({ children }: IPortfolioProviderProps) => {
     });
 
     setLanguages(Array.from(allLanguages));
+
+    const mode = localStorage.getItem("@MODE");
+
+    (mode === "ligth")
+      ? setIsDarkMode(false)
+      : setIsDarkMode(true)
   }, []);
+
+  const changeMode = () => {
+    setIsDarkMode(!isDarkMode)
+    isDarkMode
+      ? localStorage.setItem("@MODE","ligth")
+      : localStorage.setItem("@MODE","dark")
+  }
 
   const handleLanguageClick = (item: string) => {
     const filteredProjects = arrayProjects.filter((project) => project.languages.includes(item));
@@ -139,7 +153,8 @@ export const PortfolioProvider = ({ children }: IPortfolioProviderProps) => {
         languages,
         handleLanguageClick,
         selectedLanguage,
-        sendContact
+        sendContact,
+        changeMode
       }}
     >
       {children}

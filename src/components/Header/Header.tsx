@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { PortfolioContext } from "../../providers/PortfolioContext";
 
 export const Header = () => {
-  const { isDarkMode, setIsDarkMode } = useContext(PortfolioContext);
+  const { isDarkMode, changeMode } = useContext(PortfolioContext);
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
@@ -25,7 +25,7 @@ export const Header = () => {
         <h1>Anderson</h1>
         <button
           className={styles.modeButton}
-          onClick={() => setIsDarkMode(!isDarkMode)}
+          onClick={() => changeMode()}
         >
           {isDarkMode ? (
             <FaSun color={"var(--color-letter-detail)"} size={20} />
@@ -63,7 +63,7 @@ export const Header = () => {
         <div>
           <button
             className={styles.modeButtonMobile}
-            onClick={() => setIsDarkMode(!isDarkMode)}
+            onClick={() => changeMode()}
           >
             {isDarkMode ? (
               <FaSun color={"var(--color-letter-detail)"} size={20} />
